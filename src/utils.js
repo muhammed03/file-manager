@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import {userParams} from "./settings.js";
 
 function getMessage(msgType, msgParam = '') {
@@ -46,10 +47,27 @@ const printFailedMessage = () => {
     const message = getMessage('failed');
     printMessage('error', message)
 }
+
+const printInvalidInputMessage = () => {
+    const message = getMessage('invalidInput');
+    printMessage('error', message)
+}
+
+function resolvePaths(filename, path) {
+    const filepath = resolve(userParams.currentPath, filename);
+    const targetPath = resolve(userParams.currentPath, path);
+    return {
+        filepath,
+        targetPath
+    }
+}
+
 export { getMessage,
     printWelcomeMsg,
     printExitMsg,
     printCurrentPath,
     printMessage,
-    printFailedMessage
+    printFailedMessage,
+    printInvalidInputMessage,
+    resolvePaths
 };
