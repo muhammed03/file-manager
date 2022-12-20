@@ -1,0 +1,19 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "work using cli",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammed03/file-manager.git"
+  },
+  "author": "Muhammed Abdrahman \"muhammed03amin@gmail.com\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammed03/file-manager/issues"
+  },
+  "homepage": "https://github.com/muhammed03/file-manager#readme"
+}
